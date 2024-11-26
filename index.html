@@ -16,17 +16,173 @@ Select ONE Additional Feature to Add
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background-image: url("https://media.cntraveler.com/photos/581250f2997d59497dccf8bc/16:9/w_2560%2Cc_limit/GettyImages-185298837.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      @font-face {
+        font-family: hang;
+        src: url(https://cdn.glitch.global/6b425631-7106-4ed6-9413-d119039274c7/Hanged%20Letters.ttf?v=1730388138311);
+      }
+      @font-face {
+        font-family: japan;
+        src: url(https://cdn.glitch.global/6b425631-7106-4ed6-9413-d119039274c7/go3v2.ttf?v=1730388821994);
+      }
+      @font-face {
+        font-family: swiss;
+        src: url(https://cdn.glitch.global/6b425631-7106-4ed6-9413-d119039274c7/NordicaBlack.otf?v=1730996496301);
+      }
+      @font-face {
+        font-family: greece;
+        src: url(https://cdn.glitch.global/6b425631-7106-4ed6-9413-d119039274c7/Greek-Freak.ttf?v=1730996993996);
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+      #japan {
+        font-family: japan;
+        font-size: 40px;
+      }
+      #travel {
+        font-family: hang;
+        font-size: 70px;
+      }
+      img {
+        border-style: solid;
+        border-color: white;
+      }
+      #swiss {
+        font-family: swiss;
+        font-size: 35px;
+      }
+      #greece {
+        font-family: greece;
+        font-size: 55px;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: lightpink;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      li {
+        display: inline;
+      }
+      li a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: lightblue;
+        color: white;
+      }
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+      }
 
-  </style>
-</head>
-<body>
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
 
- 
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
 
-</body>
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      .flip-card-back {
+        background-color: #f5eb82;
+        color: black;
+        transform: rotateY(180deg);
+      }
+      .jap{
+        font-family:japan;
+      }
+      .swi{
+        font-family:swiss;
+      }
+      .grec{
+        font-family:greece;
+      }
+      .last-sentence{
+        color:darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Japan.html">Japan</a></li>
+      <li><a href="Switzerland.html">Switzerland</a></li>
+      <li><a href="Greece.html">Greece</a></li>
+    </ul>
+    <h1 id="travel">My Favorite Travel Destinations</h1>
+    <h2 id="japan">Japan</h2>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://content.r9cdn.net/rimg/dimg/10/dd/c1632a46-city-20339-15873436110.jpg?width=1366&height=768&xhint=792&yhint=1072&crop=true"
+            style="width: 300px; height: 300px; object-fit: cover"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1 class="jap">Kyoto</h1>
+          <p class="jap">A modern city with an ancient soul, Kyoto is a place that should be experienced by all the senses, from the exquisite beauty of its gardens to the tranquil calm of a Shinto shrine and the flavorful cuisine shaped by customs and local ingredients.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="swiss">Switzerland</h2>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://switzerland-tour.com/storage/media/Lucerne/Lucerne-from-the-top-Switzerland.jpg"
+            width="300"
+            style="width: 300px; height: 300px; object-fit: cover"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1 class="swi">Lucerne</h1>
+          <p class="swi">Lucerne is best-known for the wooden bridge spanning the river to connect the city. The most famous and world's oldest one is the Chapel Bridge dating back to the 14th century. This pedestrians bridge is decorated with pictures representing Lucerne's history.</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="greece">Greece</h2>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://us.images.westend61.de/0001628442pw/aerial-drone-view-of-iconic-and-picturesque-andros-chora-andros-island-cyclades-greek-islands-greece-europe-RHPLF21049.jpg"
+            style="width: 300px; height: 300px; object-fit: cover"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1 class="grec">Andros</h1>
+          <p class="grec">Andros offers lots of interesting places to explore, including secluded beaches and hiking trails which generated family memories that will last a lifetime. <span class="last-sentence">Tourist facilities are well-developed but not overwhelming - most visitors are Greeks and there are lots of country homes and no big hotels or resorts.</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
